@@ -9,6 +9,12 @@ Do this in both frontend and backend folders so project can install all required
 
 Include your own .env file with the same variable names as in my code to run the code properly
 
+`KEY Features`
+ 1) User Login and Signup
+ 2) Authentication and authorization using JWT
+ 3) Realtime Messaging using socket.io
+ 4) All Convos stored in MongoDb database
+ 5) User active status (online , offline).
 
 `Details about this app` 
 
