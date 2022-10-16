@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
  import ScrollToBottom from "react-scroll-to-bottom";
 import authContext from './CONTEXT/AuthContext';
 
-function Chat({socket , selectedUsername , selectedUserId}) {
+function Chat({socket , selectedUsername , selectedUserId , status}) {
 
 
      const ctx = useContext(authContext);
@@ -15,6 +15,7 @@ function Chat({socket , selectedUsername , selectedUserId}) {
     const[messageList , setMessageList] = useState([]);
     const[arrivalMessage , setArrivalMessage] = useState(null);
     const[ERROR , setError] = useState(null);
+
 
 
     const sendMessage=async(e)=>
@@ -101,9 +102,6 @@ function Chat({socket , selectedUsername , selectedUserId}) {
           }
     };
 
-    useEffect(()=>{
-      socket.current.emit("add-user" , ctx.userId);
-    },[]);
 
     useEffect(()=>{
 
@@ -140,7 +138,8 @@ function Chat({socket , selectedUsername , selectedUserId}) {
         <div className='chat' >
          {ERROR ? <h2> {ERROR} </h2> : <>
              <div className='chat-header'>
-                <h4> {selectedUsername} </h4>
+                <h3> {selectedUsername} </h3>
+                
              </div>
               
              <div className='chat-body'>

@@ -18,6 +18,7 @@ const userRoutes = require("./ROUTES/userRoutes");
 
 
 
+
 app.use("/api/users" , userRoutes);
 app.use("/api/chats" , chatRoutes);
 
@@ -52,7 +53,7 @@ let users= [];
 
 const adduser=(userId , socketId)=>
 {
-    !users.some((user)=>user.userId===userId) && users.push({userId , socketId});
+    users.some((user)=>user.userId===userId)===false && users.push({userId , socketId});
 }
 
 const getUser=(userId)=>
@@ -72,6 +73,10 @@ io.on("connection" , (socket)=>{
    socket.on("add-user" , (userId)=>{
     console.log("JOINED ROOM BY SOCKET ID" + socket.id);
          adduser(userId , socket.id);
+           
+         const onlineUsers = users.map((item)=>item.userId);
+         io.emit("online-users" , onlineUsers);
+
    });
 
    socket.on("send-msg" , (data)=>{
@@ -105,8 +110,14 @@ io.on("connection" , (socket)=>{
    
 
    socket.on("disconnect",()=>{
+    
     console.log("USER DISCONNECTED");
+     
     removeUser(socket.id);
+
+    const onlineUsers = users.map((item)=>item.userId);
+    io.emit("online-users" , onlineUsers);
+    
    })
 })
 
