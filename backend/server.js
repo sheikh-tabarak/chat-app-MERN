@@ -44,7 +44,8 @@ const serverr = http.createServer(app);
 
 const io = new Server(serverr , {
     cors : {
-     
+          origin : "*" ,
+          methods : ["GET" , "POST"]
     }
 });
 
