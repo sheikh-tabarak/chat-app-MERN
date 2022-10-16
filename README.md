@@ -2,7 +2,7 @@
 
 `npm install`
 
-Do this in both frontend and backend folders so project can install all required dependencies
+Do this in frontend folder so project can install all required dependencies . Backend already has dependecies included here.
 
 
 ` .env File`
