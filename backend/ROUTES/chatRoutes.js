@@ -4,7 +4,7 @@ const getChat = require("../CONTROLLERS/chatControllers").getChat;
 const sendMessage= require("../CONTROLLERS/chatControllers").sendMessage;
 const auth = require("../Auth");
 
-router.get("/" , getChat);
+router.get("/" , auth , getChat);
 router.post("/send" ,auth , sendMessage);
 
 module.exports = router;

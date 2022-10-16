@@ -184,7 +184,32 @@ const login = async(req , res , next)=>{
 };
 
 const getUsers=async(req,res,next)=>
+
 {
+
+    let user;
+    try
+    {
+       user = await USER.findOne({username : req.extractedUsername});
+    }
+
+    catch(err)
+    {
+        const error = new Error("SOMETHING WENT WRONG");
+        console.log(err);
+        error.code =500;
+        return next(error);
+    }
+  
+    if(!user)
+    {
+        const error = new Error("NOT AUTHORIZED");
+        console.log(err);
+        error.code =401;
+        return next(error);
+    }
+
+    
     let users;
     try
     {

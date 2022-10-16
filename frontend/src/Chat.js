@@ -82,7 +82,11 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
       let responseData;
           try
           {
-               let response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/chats?author=${ctx.userId}&to=${selectedUserId}`);
+               let response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/chats?author=${ctx.userId}&to=${selectedUserId}` , {
+                  headers : {
+                     "token" : ctx.token
+                  }
+               });
 
                responseData = await response.json();
 

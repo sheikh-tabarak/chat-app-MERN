@@ -24,7 +24,11 @@ function Home() {
     let responseData;
     try
     {
-       const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/users`);
+       const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/users` ,{
+        headers : {
+          token : ctx.token
+        }
+       });
 
        responseData = await response.json();
 
