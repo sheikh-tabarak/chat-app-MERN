@@ -54,7 +54,7 @@ function Home() {
 
   useEffect(()=>{
                   
-    socket.current = io(`${process.env.REACT_APP_SERVER_URL}`);
+    socket.current = io(`${process.env.REACT_APP_SERVER_URL}` , {transports : ["websocket"] ,});
     socket.current.emit("add-user" , ctx.userId);
 
     socket.current.on("online-users" ,(users)=>{
@@ -75,9 +75,9 @@ function Home() {
 
   return (
      <div className='totalContainer'>
-
+       <h5>SCROLL TO VIEW USERS</h5>
     <div className='userContainer'>
-
+       
       {ERROR && <h2> {ERROR} </h2>}
         {USERS.map((item)=> item.id!==ctx.userId &&  <div key={item.id} className="user" onClick={()=>handleClick( item.id,item.username )}> 
 
