@@ -15,6 +15,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
     const[messageList , setMessageList] = useState([]);
     const[arrivalMessage , setArrivalMessage] = useState(null);
     const[ERROR , setError] = useState(null);
+    const[isLoading , setIsLoading] = useState();
 
 
 
@@ -33,11 +34,14 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
            
          };
 
+
           socket.current.emit("send-msg" , messageData);
          
             setMessageList((list)=>{
                 return [...list , messageData];
             })
+
+            setCurrentMessage("");
 
             // SAVE THE MESSAGE TO MONGODB
 
@@ -71,7 +75,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
             catch(err)
             {
                setError(err.message);
-               console.log(err.message);
+              
             }
              
        }
@@ -82,6 +86,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
       let responseData;
           try
           {
+             setIsLoading(true);
                let response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/chats?author=${ctx.userId}&to=${selectedUserId}` , {
                   headers : {
                      "token" : ctx.token
@@ -96,13 +101,17 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
                }
 
                setMessageList(responseData.chat);
-               console.log(" CHAT RECEIEVED FROM DATABASE");
+               
+               setIsLoading(false);
+
           }
 
 
           catch(err)
           {
                setError(err.message);
+               setIsLoading(false);
+
           }
     };
 
@@ -112,8 +121,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
       socket.current.on("recieve-msg" , (data)=>{
 
           setArrivalMessage(data);
-                  
-          console.log("RECIEVED MESSAGE" , data);
+               
     
       })
 
@@ -165,8 +173,8 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
              </div>
             
              <div className='chat-footer'>
-                <input type="text" placeholder='hey , this is message' onChange={(e)=>setCurrentMessage(e.target.value)} /> 
-                <button onClick={sendMessage}> &#9658; </button>
+                <input type="text" placeholder='hey , this is message' value={currentMessage} onChange={(e)=>setCurrentMessage(e.target.value)} /> 
+                <button type='submit'  onClick={sendMessage}> &#9658; </button>
              </div>  </> }
         </div>
     );

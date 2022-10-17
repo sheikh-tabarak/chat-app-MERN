@@ -69,7 +69,7 @@ input
 {
   border: 1px solid grey;
   height: 100%; 
-  background-color: transparent;
+  background-color: lightgreen;
   border-radius: 0;
 }
 
@@ -225,8 +225,9 @@ width: fit-content;
   justify-content: center;
   background-color: skyblue;
   border-radius: 10px;
+  width: 100px;
+  height: auto;
   padding: 10px;
-  width: fit-content;
   word-wrap: break-word;
   white-space: pre-wrap;
   cursor: pointer;

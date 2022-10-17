@@ -15,6 +15,7 @@ function Home() {
   const[selectedUsername , setSelectedUsername] = useState(null);
   const[selectedUserId , setSelectedUserId] = useState(null);
   const[onlineUsers , setOnlineUsers] = useState([]);
+  const[isLoading , SetIsLoading] = useState();
 
   const socket = useRef();
  const ctx = useContext(authContext);
@@ -24,6 +25,7 @@ function Home() {
     let responseData;
     try
     {
+      SetIsLoading(true);
        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/users` ,{
         headers : {
           token : ctx.token
@@ -38,11 +40,13 @@ function Home() {
        }
 
        setUsers(responseData.users);
+       SetIsLoading(false);
     }
 
     catch(err)
     {
        setError(err.message);
+       SetIsLoading(false);
     }
 
   }
@@ -74,8 +78,8 @@ function Home() {
 
 
   return (
-     <div className='totalContainer'>
-       <h5>SCROLL TO VIEW USERS</h5>
+     <div className='totalContainer'> 
+     {isLoading && <h3>LOADING....</h3> }
     <div className='userContainer'>
        
       {ERROR && <h2> {ERROR} </h2>}
