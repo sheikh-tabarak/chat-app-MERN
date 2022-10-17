@@ -148,6 +148,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
 
     return (
         <div className='chat' >
+         {isLoading=== true && <h3>LOADING....</h3>}
          {ERROR ? <h2> {ERROR} </h2> : <>
              <div className='chat-header'>
                 <h3> {selectedUsername} </h3>
