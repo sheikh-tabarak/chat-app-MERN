@@ -1,5 +1,9 @@
 # REALTIME-PRIVATE-CHATTING-APP_MERN-WITH-SOCKET.IO
 
+
+`This app is now live `
+  https://huzaifac137-chat-app-0.onrender.com/
+
 `npm install`
 
 Do this in frontend folder so project can install all required dependencies . Backend already has dependecies included here.
