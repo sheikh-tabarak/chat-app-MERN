@@ -12,6 +12,8 @@ import Chat from './Chat';
 
 function App(props) {
 
+
+
   const[EMAIL , setEmail] = useState();
   const[USERNAME , setUsername] = useState();
   const[TOKEN, setToken] = useState(null);
@@ -30,11 +32,15 @@ function App(props) {
 
   },[]);
 
+  let socketValue = io("http://localhost:5000");
+
+  const socket = React.useMemo(()=>( socketValue),[socketValue]) ;
+
    
 
   return (
     <authContext.Provider value={{username : USERNAME , email : EMAIL , token : TOKEN , userId : USERID , setUsername : setUsername ,
-      setEmail :setEmail , setToken : setToken , setUserId : setUserId  }} >
+      setEmail :setEmail , setToken : setToken , setUserId : setUserId , socket : socket }} >
 
     <BrowserRouter>
     <Navbar/>
