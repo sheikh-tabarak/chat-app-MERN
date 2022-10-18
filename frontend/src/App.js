@@ -30,14 +30,11 @@ function App(props) {
 
   },[]);
 
-  let socketValue = io("http://localhost:5000");
-
-const socket = React.useMemo(()=>( socketValue),[socketValue]) ;
-
+   
 
   return (
     <authContext.Provider value={{username : USERNAME , email : EMAIL , token : TOKEN , userId : USERID , setUsername : setUsername ,
-      setEmail :setEmail , setToken : setToken , setUserId : setUserId  , socket : socket }} >
+      setEmail :setEmail , setToken : setToken , setUserId : setUserId  }} >
 
     <BrowserRouter>
     <Navbar/>
