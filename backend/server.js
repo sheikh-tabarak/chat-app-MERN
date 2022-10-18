@@ -8,7 +8,7 @@ require("dotenv").config();
 const auth = require("./Auth");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin : "*"}));
 
 
 const CHAT = require("./MODELS/Chat");
