@@ -2,7 +2,7 @@
 
 
 `This app is now live `
-  https://huzaifac137-chat-app-0.onrender.com/
+https://huzaifac137chattigapp.onrender.com
 
 `npm install`
 
