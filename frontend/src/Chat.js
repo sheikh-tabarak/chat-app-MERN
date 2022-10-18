@@ -8,9 +8,6 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
 
      const ctx = useContext(authContext);
     
-   // const socket =io("http://localhost:5000");
-   //const socket = ctx.socket;
-
     const[currentMessage , setCurrentMessage] = useState("");
     const[messageList , setMessageList] = useState([]);
     const[arrivalMessage , setArrivalMessage] = useState(null);
@@ -55,7 +52,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
 
                   headers : {
                      "Content-Type" : "application/json" ,
-                     "token" : ctx.token
+                     "Authorization" : ctx.token
                   } ,
                   
                   body : JSON.stringify({
@@ -89,7 +86,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
              setIsLoading(true);
                let response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/chats?author=${ctx.userId}&to=${selectedUserId}` , {
                   headers : {
-                     "token" : ctx.token
+                     "Authorization" : ctx.token
                   }
                });
 

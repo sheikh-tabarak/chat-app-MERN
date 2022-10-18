@@ -4,7 +4,7 @@ require("dotenv").config();
 const auth =(req , res ,next)=>
 {
    
-    const{token} = req.headers;
+    const token = req.headers.authorization;
 
   let extractedToken;
 
@@ -15,13 +15,12 @@ const auth =(req , res ,next)=>
 
   catch(err)
   {
-    const error = new Error("SOMETHING WENT WRONG");
-    console.log(err);
+    const error = new Error("SOMETHING WENT WRONG ");
     error.code =500;
     return next(error);
   }
 
-   
+   console.log("AUTHENTICATED");
   req.extractedUserId = extractedToken.userId;
   req.extractedUsername = extractedToken.username;
 

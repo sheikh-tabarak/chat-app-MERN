@@ -28,7 +28,8 @@ function Home() {
       SetIsLoading(true);
        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/users` ,{
         headers : {
-          token : ctx.token
+          
+          "Authorization" : ctx.token
         }
        });
 
