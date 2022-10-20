@@ -161,8 +161,11 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
                      
                     <div className='message-content'>
                      <h3 className='name'>{item.authorName}</h3>
+
+                     <div style={{display:"flex" , justifyContent:"space-between" }}>
                      <h3> {item.message} </h3> 
-                     <h5> {item.time} </h5> 
+                     <h5 style={{alignSelf:"flex-end" , margin:"5px"}} > {item.time} </h5> 
+                     </div>
 
                        </div> 
                         </div> ) }

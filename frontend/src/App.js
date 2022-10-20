@@ -12,8 +12,6 @@ import Chat from './Chat';
 
 function App(props) {
 
-
-
   const[EMAIL , setEmail] = useState();
   const[USERNAME , setUsername] = useState();
   const[TOKEN, setToken] = useState(null);
@@ -31,7 +29,6 @@ function App(props) {
     }
 
   },[]);
-
 
    
 

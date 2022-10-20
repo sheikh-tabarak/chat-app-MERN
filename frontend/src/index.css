@@ -97,35 +97,35 @@ input
 {
    display: flex;
    width: 100%;
-   padding: 10px;
 }
 
 .you .message-content
 {
-  width: fit-content;
-  padding: 10px;
-  max-width: 60%;
-  background-color: lightgreen;
+  padding: 5px;
+  max-width: 70%;
+  background-color: rgb(103, 224, 103);
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   word-wrap: break-word;
   white-space: pre-wrap;
-  margin-right: 20px;
-
 }
 
 .other .message-content
 {
-  width: fit-content;
-  padding: 10px;
-  max-width: 60%;
-  background-color: skyblue;
+  padding: 5px;
+  max-width: 70%;
+  background-color:rgb(182, 180, 180);
   margin: 10px;
   border-radius: 10px;
-  height: auto;
   word-wrap: break-word;
   white-space: pre-wrap;
-  margin-left: 20px;
+}
+
+.message-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -148,7 +148,6 @@ input
 
   .name
 {
-  text-align: start; 
 border-bottom: 1px solid grey;
 width: fit-content;
 }
@@ -223,15 +222,13 @@ width: fit-content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: skyblue;
   border-radius: 10px;
-  width: 100px;
-  height: auto;
   padding: 10px;
-  word-wrap: break-word;
-  white-space: pre-wrap;
   cursor: pointer;
-  margin: 20px 20px;
+  flex-grow: 1;
+  margin: 5px;
 }
 
 .userContainer
@@ -266,7 +263,6 @@ width: fit-content;
   .userContainer
 {
   margin:30px;
-  max-width: 85%;
 }
 
 .chat
@@ -282,20 +278,18 @@ width: fit-content;
 
   .message-content
   {
-    width: 85%;
     max-width: 90%;
   }
 
   .chat
   {
-    width: 80%;
+    width: 95%;
     max-width: 100%;
   }
 
   .userContainer
 {
   margin:20px;
-  max-width: 70%;
 }
 
   .chat h3
@@ -308,17 +302,6 @@ width: fit-content;
     font-size: 10px;
   }
 
-  .userContainer
-  {
-      max-width: 75%;
-  }
-
-  .user
-  {
-    width:130%;
-    height: 70px;
-    
-  }
 
 .user h3
 {
@@ -353,18 +336,17 @@ width: fit-content;
 
   .message-content
   {
-     width: 90%;
+    max-width: 95%;
   }
 
   .chat
   {
-    width: 80%;
+    max-width: 100%;
   }
 
   .userContainer
   {
     margin:5px;
-    max-width: 50%;
   }
 
   .userContainer h3
@@ -409,11 +391,6 @@ width: fit-content;
 {
   font-size: 9px;
 }
-
-  .message-content
-  {
-    max-width: 90%;
-  }
 
   .chat
   {
