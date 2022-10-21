@@ -5,6 +5,7 @@ import Signup from './AUTH/Signup';
 import Home from './Home';
 import authContext from './CONTEXT/AuthContext';
 import Navbar from './COMPONENTS/Navbar';
+import Footer from './COMPONENTS/footer';
 import { io } from 'socket.io-client';
 import Chat from './Chat';
 
@@ -45,6 +46,7 @@ function App(props) {
 
 
     </Routes>
+    <Footer/>
     </BrowserRouter>
     </authContext.Provider>
 
