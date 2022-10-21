@@ -40,6 +40,7 @@ function Navbar(props) {
     
     {  !ctx.token &&   <NavLink to="/signup"> <button class="btn btn-success my-2 my-sm-0" type="submit">SIGNUP</button> </NavLink> }   
     
+    { ctx.token && <button  onClick={handleLogout} class="btn btn-danger my-2 my-sm-0" type="submit">Logout</button> }
       
   </div>
 </nav>

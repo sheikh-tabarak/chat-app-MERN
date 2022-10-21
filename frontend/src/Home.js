@@ -4,6 +4,7 @@ import './App.css';
 import Chat from './Chat';
 import { io } from 'socket.io-client';
 import authContext from './CONTEXT/AuthContext';
+import Loading from './Loading';
 
 function Home() {
 
@@ -80,7 +81,7 @@ function Home() {
 
   return (
      <div className='totalContainer'> 
-     {isLoading && <h3>LOADING....</h3> }
+     {isLoading && <Loading/> }
     <div className='userContainer'>
        
       {ERROR && <h2> {ERROR} </h2>}
