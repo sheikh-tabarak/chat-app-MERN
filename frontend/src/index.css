@@ -374,13 +374,13 @@ width: fit-content;
   {
       max-width: 70%;
       margin-left: 10px;
+      background-color: white;
   }
 
   .user
   {
     width:70px;
     height: 70px;
-    
   }
 
 .user h3

@@ -87,8 +87,22 @@ function Home() {
       {ERROR && <h2> {ERROR} </h2>}
         {USERS.map((item)=> item.id!==ctx.userId &&  <div key={item.id} className="user" onClick={()=>handleClick( item.id,item.username )}> 
 
-           <h3>{item.username}</h3> 
-           <h4>  {  onlineUsers.some((user)=>user===item.id)? "online" : " offline"} </h4> 
+
+        <div class="profile-userpic">
+					<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""/>
+				</div>
+				
+			
+        <center>
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"/>
+                    <h3 class="media-heading">{item.username}</h3>
+                    
+                    {  onlineUsers.some((user)=>user===item.id)? <span class="label label-success">online</span> :<span class="label label-danger">offline</span>}
+                       
+                    </center>
+
+           {/* <h3>{item.username}</h3> 
+           <h4>  {  onlineUsers.some((user)=>user===item.id)? "online" : " offline"} </h4>  */}
 
          </div> )}   
 

@@ -110,7 +110,9 @@ function Login(props) {
         {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
           class="img-fluid" alt="Sample image"/> */}
 
-          <img height={500} src={CHATTING} alt="" />
+  <img src={CHATTING} class="img-fluid" alt="Responsive image"/>
+
+        {/* /  <img height={500} src={CHATTING} alt="" /> */}
       </div>
 
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
