@@ -25,7 +25,7 @@ function Navbar(props) {
         </div>
 
         <div className='navlinks'>
-         { !ctx.token &&   <NavLink to="/login" > LOGIN </NavLink> }
+         { !ctx.token &&   <NavLink to="/login" > LOGIN WITH US </NavLink> }
          {  !ctx.token &&   <NavLink to="/signup"> SIGNUP </NavLink> }
         </div>
      
