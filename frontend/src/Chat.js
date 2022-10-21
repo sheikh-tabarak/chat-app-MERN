@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import ScrollToBottom from "react-scroll-to-bottom";
 import authContext from "./CONTEXT/AuthContext";
 import "./COMPONENTS/easychat.css";
+import Loading from "./Loading";
 
 function Chat({ socket, selectedUsername, selectedUserId, status }) {
   const ctx = useContext(authContext);
@@ -123,8 +124,8 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
     <>
       {/* rounded-lg overflow-hidden shadow */}
 
-      <div className="abc">
-        {isLoading === true && <h3>LOADING....</h3>}
+      <div className="">
+        {isLoading === true && <Loading/>}
         {ERROR ? (
           <h2> {ERROR} </h2>
         ) : (
