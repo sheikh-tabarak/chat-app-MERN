@@ -8,6 +8,8 @@ import Navbar from './COMPONENTS/Navbar';
 import Footer from './COMPONENTS/footer';
 import { io } from 'socket.io-client';
 import Chat from './Chat';
+import NewChatView from './COMPONENTS/Chats/NewChatView';
+import EasyChat from './COMPONENTS/EasyChat'
 
 
 
@@ -39,6 +41,8 @@ function App(props) {
 
     <BrowserRouter>
     <Navbar/>
+    {/* <EasyChat/> */}
+    {/* <Chat selectedUserId={0} selectedUsername={"huzaifac137"} socket={"online"} status={"online"} setToken={"ds"}/> */}
     <Routes>
      { TOKEN ? <Route path='/' element={<Home/>} /> : <Route path='/' element={<Login/>} />  }
     {!TOKEN &&  <Route path='/login' element={<Login/>}/>  }
