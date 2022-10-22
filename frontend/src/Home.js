@@ -98,16 +98,18 @@ function Home() {
                    
                     </center>			
        
-         </div> )}   
+         </div>   
 
-
+)} 
     </div>
     <div class="row">
-    <div class="col-sm-4">
+    {isLoading && <Loading/> }
+    <div class="col-2">
     <div class="container">
   <div class="row justify-content-center align-items-center">
-
+  <div className='userContainer'>
   <center>
+
         <div style={{width:70}} class=" border border-5  rounded-circle border-danger">
                     <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
                    </div>
@@ -115,16 +117,23 @@ function Home() {
                    
                     <span class="badge badge-pill badge-success">online</span>
                     </center>	
+                    </div>
 
     </div>
     </div>
-
     </div>
-    <div class="col-sm-8">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  }</div>
+
+
+
+    <div class="col-10">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  }</div>
   </div>
 
-    
+
+  
     </div>
+
+
+
     </>
   );
 }
