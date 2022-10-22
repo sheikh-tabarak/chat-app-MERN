@@ -182,7 +182,7 @@ function Home() {
         <div style={{width:70}} class=" border border-5  rounded-circle border-danger">
                     <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
                    </div>
-                    <h4  style={{marginBottom:-3}}><strong>{item.username}</strong></h4>
+                    <p  style={{marginBottom:-3}}><strong>{item.username}</strong></p>
                    
                     {  onlineUsers.some((user)=>user===item.id)? 
                     <span class="badge badge-pill badge-success">online</span>:
@@ -198,9 +198,9 @@ function Home() {
                        
                     </center> */}
 
-           <h4>{item.username}</h4> 
+           {/* <h4>{item.username}</h4> 
             
-                  <h4>  {  onlineUsers.some((user)=>user===item.id)? "online" : " offline"} </h4> 
+                  <h4>  {  onlineUsers.some((user)=>user===item.id)? "online" : " offline"} </h4>  */}
 
          </div> )}   
 
