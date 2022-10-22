@@ -75,6 +75,20 @@ function Home() {
 
       <div className='totalContainer'> 
      {isLoading && <Loading/> }
+<div>
+     <div class="row justify-content-center align-items-center">
+  <div className='p-5 m-2 border border-5  rounded border-success'>
+  <center>
+        <div style={{width:70}} class=" border border-5  rounded-circle border-success">
+                    <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
+                   </div>
+                    <p  style={{marginBottom:-3}}><strong>{ctx.username}</strong></p>
+                   
+                    <span class="badge badge-pill badge-success">online</span>
+                    </center>	
+                    </div>
+    </div>
+
     <div className='userContainer'>
        
       {ERROR && <h2> {ERROR} </h2>}
@@ -102,33 +116,14 @@ function Home() {
 
 )} 
     </div>
-    <div class="row">
-    <div class="col-sm-2">
-    <div class="container">
-  <div class="row justify-content-center align-items-center">
-  <div className='p-5 border border-5  rounded border-success'>
-  <center>
-
-        <div style={{width:70}} class=" border border-5  rounded-circle border-success">
-                    <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
-                   </div>
-                    <p  style={{marginBottom:-3}}><strong>{ctx.username}</strong></p>
-                   
-                    <span class="badge badge-pill badge-success">online</span>
-                    </center>	
-                    </div>
-
     </div>
-    </div>
-    </div>
-
-
-
-    <div class="col-sm-8">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  }</div>
-  </div>
-
-
   
+  
+  
+
+
+
+    <div class="row"><div class="col">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} /> }</div></div>  
     </div>
 
 
