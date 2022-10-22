@@ -1,8 +1,6 @@
-# REALTIME-PRIVATE-CHATTING-APP_MERN-WITH-SOCKET.IO
+## This tool is live on
 
-
-`This app is now live `
-https://huzaifac137chattigapp.onrender.com
+https://chatapp.techlegion.ml
 
 `npm install`
 
