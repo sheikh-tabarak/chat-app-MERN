@@ -319,7 +319,7 @@ width: fit-content;
 
 .user h4
 {
-  font-size: 11px;
+  font-size:8px;
 }
 
   .message-content
@@ -362,6 +362,11 @@ width: fit-content;
   .userContainer h3
   {
      font-size: 10px;
+  }
+
+  .userContainer h4
+  {
+     font-size: 7px;
   }
 
   .userContainer h5
