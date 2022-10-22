@@ -103,19 +103,19 @@ function Login(props) {
 
 
 
-<section class="vh-100">
+<section class="vh-100 loginpagemain">
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
         {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
           class="img-fluid" alt="Sample image"/> */}
 
-  <img src={CHATTING} class="img-fluid" alt="Responsive image"/>
+  {/* <img src={CHATTING} class="img-fluid" alt="Responsive image"/> */}
 
         {/* /  <img height={500} src={CHATTING} alt="" /> */}
       </div>
 
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <div class="col-md-8 col-lg-6 col-xl-4 border p-4 shadow p-3 mb-3 mt-3 bg-white rounded">
         
         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
            <img src={LOGO} alt="" />
@@ -162,12 +162,10 @@ function Login(props) {
        {/* style={'padding-left: 2.5rem; padding-right: 2.5rem'} */}
               
               
-            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/signup"
                 class="link-danger">Register</a></p>
           </div>
 
-          
-          
             </div>
 
     </div>

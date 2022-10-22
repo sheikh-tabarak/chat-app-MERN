@@ -401,3 +401,23 @@ width: fit-content;
 
 
 }
+
+
+.signuppagemain{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment:scroll;
+  opacity: 0.8;
+  background-image: url(https://images.unsplash.com/photo-1551842864-a185da0fbbbb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNoYXR0aW5nfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+}
+
+
+.loginpagemain{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment:scroll;
+  opacity: 0.8;
+  background-image: url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fGNoYXR0aW5nJTIwb25saW5lfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+}
