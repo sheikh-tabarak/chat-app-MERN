@@ -141,7 +141,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
           //         <div class="list-group rounded-0">
 */}
 
-,
+
 
                     {/* <a class="list-group-item list-group-item-action active text-white rounded-0">
               <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle"/>
@@ -152,7 +152,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
                   <p class="font-italic mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 </div>
               </div>
-            </a> */},
+            </a> */}
                     {/* 
             <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
               <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle"/>
@@ -164,7 +164,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
                 </div>
               </div>
             </a> */}
-,
+
                     {/* <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
               <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle"/>
                 <div class="media-body ml-4">
@@ -175,7 +175,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
                 </div>
               </div>
             </a> */}
-,
+
                     {/* <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
               <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle"/>
                 <div class="media-body ml-4">
@@ -186,7 +186,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
                 </div>
               </div>
             </a> */}
-,
+
                     {/* <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
               <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle"/>
                 <div class="media-body ml-4">
@@ -197,7 +197,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
                 </div>
               </div>
             </a> */}
-,
+
                     {/* <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
               <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle"/>
                 <div class="media-body ml-4">
@@ -208,7 +208,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
                 </div>
               </div>
             </a> */}
-,
+
                     {/* <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
               <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle"/>
                 <div class="media-body ml-4">
@@ -380,7 +380,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
       {/* Old Chat Setup Complete */}
 
       <div className="chat">
-        {isLoading === true && <h3>LOADING....</h3>}
+        {isLoading === true && <Loading/>}
         {ERROR ? (
           <h2> {ERROR} </h2>
         ) : (

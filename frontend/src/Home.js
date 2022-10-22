@@ -102,10 +102,25 @@ function Home() {
 
 
     </div>
-    
     <div class="row">
-    <div class="col-4">col-8</div>
-    <div class="col-8">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  }</div>
+    <div class="col-sm-4">
+    <div class="container">
+  <div class="row justify-content-center align-items-center">
+
+  <center>
+        <div style={{width:70}} class=" border border-5  rounded-circle border-danger">
+                    <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
+                   </div>
+                    <p  style={{marginBottom:-3}}><strong>{ctx.username}</strong></p>
+                   
+                    <span class="badge badge-pill badge-success">online</span>
+                    </center>	
+
+    </div>
+    </div>
+
+    </div>
+    <div class="col-sm-8">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  }</div>
   </div>
 
     
