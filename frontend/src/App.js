@@ -41,6 +41,7 @@ function App(props) {
 
     <BrowserRouter>
     <Navbar/>
+   
     {/* <EasyChat/> */}
     {/* <Chat selectedUserId={0} selectedUsername={"huzaifac137"} socket={"online"} status={"online"} setToken={"ds"}/> */}
     <Routes>
