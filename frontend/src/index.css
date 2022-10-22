@@ -35,10 +35,11 @@ input
   flex-direction: column;
   align-items: center;
   border: 1px solid grey;
-  width: 60%;
-  max-width: 80%;
-  justify-content: space-evenly;
-  margin: 50px auto;
+  /*width: 60%;*/
+  width: auto;
+  /*max-width: 80%;
+  justify-content: space-evenly;*/
+  margin: 10px auto;
 }
 
 
@@ -233,10 +234,12 @@ width: fit-content;
 
 .userContainer
 {
-  margin:30px;
+  margin-bottom:30px;
+  margin-left: 30px;
+  margin-right: 30px;
   display: flex;
   align-items: center;
-  width: 90%;
+  width: auto;
   overflow-x: auto;
 }
 
@@ -286,13 +289,16 @@ width: fit-content;
 
   .chat
   {
-    width: 95%;
+    width: auto;
     max-width: 100%;
   }
 
   .userContainer
 {
-  margin:20px;
+  margin-bottom:20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
   .chat h3
@@ -374,7 +380,7 @@ width: fit-content;
 
   .userContainer
   {
-      max-width: 70%;
+      max-width: 100%;
       margin-left: 10px;
       background-color: white;
   }

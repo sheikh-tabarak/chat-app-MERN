@@ -70,100 +70,7 @@ function Home() {
 
   return (
     <>
-      <div className="totalContainer">
-        {/* {isLoading && <Loading/> } */}
-        <div className="userContainer">
-          {/*   
- {ERROR && <h2> {ERROR} </h2>}
-   {USERS.map((item)=> item.id!==ctx.userId &&  <div key={item.id} className="user" onClick={()=>handleClick( item.id,item.username )}>  */}
-
-          {/* <img width={40} src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="rounded-circle" alt=""/> */}
-
-
-
-
-
-
-
-
-
-
-          {/* <center>
-            <div className="userContainer">
-              <div>
-              <div style={{width:70}} class=" border border-5  rounded-circle border-danger">
-            <img 
-                 
-                  src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg"
-                  name="aboutme"
-                  class=" img-fluid rounded-circle"
-                />
-              </div>
-              <h5>
-                <strong>user </strong>
-              </h5>
-                
-           
-              <span class="badge badge-pill badge-success">online</span>
-              <span class="badge badge-pill badge-danger">offline</span>
-
-
-              </div>
-            </div>
-          </center> */}
-
-{/* 
-
- <div className='totalContainer'> 
-     
-    <div className='userContainer'>
-  		
-        <center>
-        <div style={{width:70}} class=" border border-5  rounded-circle border-danger">
-                    <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
-                   </div>
-                    <h4  style={{marginBottom:-3}}><strong>user </strong></h4>
-                   
-                    {  onlineUsers.some((user)=>user===item.id)? 
-                    <span class="badge badge-pill badge-success">online</span>:
-                    <span class="badge badge-pill badge-danger">offline</span>
-                    }
-                   
-                    </center>
-
-         
-
-         </div>
-         </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {/* <h3>{item.username}</h3> 
-      <h4>  {  onlineUsers.some((user)=>user===item.id)? "online" : " offline"} </h4>  */}
-        </div>
-        {/*     
-     )}    */}
-      </div>
-      {/* {showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  } */}
-
+ 
       {/* Old Code Written by @Huzaifa*/}
 
       <div className='totalContainer'> 
@@ -190,23 +97,18 @@ function Home() {
                     }
                    
                     </center>			
-        {/* <center>
-                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"/>
-                    <h3 class="media-heading">{item.username}</h3>
-                    
-                    {  onlineUsers.some((user)=>user===item.id)? <span class="label label-success">online</span> :<span class="label label-danger">offline</span>}
-                       
-                    </center> */}
-
-           {/* <h4>{item.username}</h4> 
-            
-                  <h4>  {  onlineUsers.some((user)=>user===item.id)? "online" : " offline"} </h4>  */}
-
+       
          </div> )}   
 
 
     </div>
-    {showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  }
+    
+    <div class="row">
+    <div class="col-4">col-8</div>
+    <div class="col-8">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} />  }</div>
+  </div>
+
+    
     </div>
     </>
   );
