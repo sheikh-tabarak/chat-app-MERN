@@ -74,24 +74,18 @@ function Home() {
       {/* Old Code Written by @Huzaifa*/}
 
       <div className='totalContainer'> 
-     {isLoading && <Loading/> }
+     
 <div>
-     <div class="row justify-content-center align-items-center">
-  <div className='p-5 m-2 border border-5  rounded border-success'>
-  <center>
-        <div style={{width:70}} class=" border border-5  rounded-circle border-success">
-                    <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
-                   </div>
-                    <p  style={{marginBottom:-3}}><strong>{ctx.username}</strong></p>
-                   
-                    <span class="badge badge-pill badge-success">online</span>
-                    </center>	
-                    </div>
-    </div>
+
+    {isLoading && <Loading/> }
 
     <div className='userContainer'>
        
+
       {ERROR && <h2> {ERROR} </h2>}
+        
+
+
         {USERS.map((item)=> item.id!==ctx.userId &&  <div key={item.id} className="user" onClick={()=>handleClick( item.id,item.username )}> 
 
 
@@ -100,7 +94,7 @@ function Home() {
 				</div>
 
         <center>
-        <div style={{width:70}} class=" border border-5  rounded-circle border-danger">
+        <div  class="userbox border border-5  rounded-circle border-danger">
                     <img class="img-fluid rounded-circle" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" name="aboutme"/>
                    </div>
                     <p  style={{marginBottom:-3}}><strong>{item.username}</strong></p>
@@ -123,7 +117,7 @@ function Home() {
 
 
 
-    <div class="row"><div class="col">{showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} /> }</div></div>  
+    {showChat===true &&  <Chat socket={socket} selectedUserId={selectedUserId} selectedUsername ={selectedUsername} /> }
     </div>
 
 

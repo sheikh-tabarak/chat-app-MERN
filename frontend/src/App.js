@@ -2,6 +2,7 @@ import React , {useEffect , useMemo, useState} from 'react';
 import { BrowserRouter, redirect, Route, Routes } from 'react-router-dom';
 import Login from './AUTH/Login';
 import Signup from './AUTH/Signup';
+import MyAccount from './AUTH/MyAccount';
 import Home from './Home';
 import authContext from './CONTEXT/AuthContext';
 import Navbar from './COMPONENTS/Navbar';
@@ -48,6 +49,7 @@ function App(props) {
      { TOKEN ? <Route path='/' element={<Home/>} /> : <Route path='/' element={<Login/>} />  }
     {!TOKEN &&  <Route path='/login' element={<Login/>}/>  }
     {!TOKEN &&  <Route path='/signup' element={ <Signup/>} /> }
+    {TOKEN &&  <Route path='/account' element={ <MyAccount/>} /> }
 
 
     </Routes>

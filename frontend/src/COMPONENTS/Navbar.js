@@ -40,8 +40,11 @@ function Navbar(props) {
     
     {  !ctx.token &&   <NavLink to="/signup"> <button class="btn btn-success my-2 my-sm-0" type="submit">SIGNUP</button> </NavLink> }   
     
-    { ctx.token && <button  onClick={handleLogout} class="btn btn-danger my-2 my-sm-0" type="submit">Logout</button> }
+    { ctx.token &&  <NavLink to="/account" end style={{marginRight:"50px"}}> <a class="nav-link" href="#">My Account <span class="sr-only">(current)</span></a></NavLink> }
       
+    { ctx.token && <button  onClick={handleLogout} class="btn btn-danger my-2 my-sm-0" type="submit">Logout</button> }
+
+
   </div>
 </nav>
 

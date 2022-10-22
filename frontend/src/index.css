@@ -28,6 +28,9 @@ input
   margin-bottom: 20px;
 }
 
+.userbox{
+  width: 70;
+}
 
 .chat
 {
@@ -254,6 +257,10 @@ width: fit-content;
 @media only screen and (max-width : 850px)
 {
 
+
+  .userbox{
+    width: 110;
+  }
   .chat h3
   {
     font-size: 16px;
@@ -281,6 +288,10 @@ width: fit-content;
 
 @media only screen and (max-width : 730px)
 {
+
+  .userbox{
+    width: 110;
+  }
 
   .message-content
   {
